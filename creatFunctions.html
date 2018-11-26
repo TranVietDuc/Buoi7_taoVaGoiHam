@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirming Something</title>
+    <script>
+        function processConfirm(answer){
+            var result ="";
+            if(answer){
+                result ="Excellent. We'll play a nice game of chess.";
+            } else {
+                result = "Maybe later then";
+            }
+            return result;
+        }
+    </script>
+</head>
+<body>
+<script>
+    function confirm(question){
+        let reaction = prompt(question + " Please type 'Yes' or 'No'");
+        if (reaction == 'Yes')
+            return 1;
+        else if (reaction == 'No')
+            return 0;
+        else alert("What do you really want?")
+    }
+    while(1)
+    {
+        var confirmAnswer = confirm("Shall we play a game?");
+        var theAnswer = processConfirm(confirmAnswer);
+        alert(theAnswer);
+    }
+</script>
+</body>
+</html>
